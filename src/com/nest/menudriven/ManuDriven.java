@@ -1,10 +1,13 @@
 package com.nest.menudriven;
 
+import com.nest.Billing.Fooditems;
+
 import java.util.Scanner;
 
 public class ManuDriven {
     public static void main(String[] args) {
         int choice;
+        // Fooditems fooditems = new Fooditems(10,12,15,22)
         while(true)
         {
             System.out.println("select the option");

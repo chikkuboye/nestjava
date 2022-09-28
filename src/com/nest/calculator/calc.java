@@ -27,6 +27,16 @@ public class calc {
                     System.out.println(z);
                     break;
                 case 4:
+                    try
+                    {
+                        z = x / y;
+                        System.out.println(z);
+                    }
+                    catch (ArithmeticException e)
+                    {
+                        System.out.println("e");
+                    }
+                case 5:
                     System.exit(0);
 
 

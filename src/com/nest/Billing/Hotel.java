@@ -31,6 +31,7 @@ public class Hotel {
         System.out.println("3 : Billing");
 
         System.out.println(items);
+
         while(true)
         {
             Scanner obj = new Scanner(System.in);
@@ -38,21 +39,26 @@ public class Hotel {
             choice = obj.nextInt();
             // choice1 = obj.nextInt();
             Scanner name = new Scanner(System.in);
-            System.out.println("enter the name of customer");
-            String names = name.next();
-            map.put("CustomerName:" , names);
+            // System.out.println("enter the name of customer");
+            // String names = name.next();
+            // map.put("CustomerName:" , names);
 
             Random rand = new Random();
 
-            int customerNumber = rand.nextInt(10000,100000);
-            map.put("CustomerNumber:",String.valueOf(customerNumber));
+            // int customerNumber = rand.nextInt(10000,100000);
+            // map.put("CustomerNumber:",String.valueOf(customerNumber));
 
             // map.put("amount","123");
             // map.put("mode","Dine in");
             // transaction.add(map)
             switch (choice) {
                 case 1:
-                        System.out.println("Dinning");
+                    System.out.println("Dinning");
+                    System.out.println("enter the name of customer");
+                    String names = name.next();
+                    map.put("CustomerName:", names);
+                    int customerNumber = rand.nextInt(10000, 100000);
+                    map.put("CustomerNumber:", String.valueOf(customerNumber));
                         System.out.println("enter the items you need");
                         choice1 = obj.nextInt();
                         switch (choice1) {
@@ -61,9 +67,9 @@ public class Hotel {
                                 System.out.println("enter the quantity");
                                 int buy = obj.nextInt();
                                 int p = buy * fooditems.getTea();
-                                System.out.println(p);
+                                // System.out.println(p);
                                 // total = total + p;
-                                pro.add(total);
+                                pro.add(p);
                                 // buyed.add("tea");
                                 map.put("Total:", String.valueOf(p));
                                 transaction.add(String.valueOf(map));
@@ -109,19 +115,18 @@ public class Hotel {
                                 // System.out.println("item purchased" + buyed);
                                 // System.out.println("item total price" + pro);
                                 break;
-
-                            case 5:
-                                System.exit(0);
                         }
                         break;
 
 
 
-
                 case 2:
-
-
                         System.out.println("Takeaway");
+                        System.out.println("enter the name of customer");
+                        names = name.next();
+                        map.put("CustomerName:", names);
+                        customerNumber = rand.nextInt(10000, 100000);
+                        map.put("CustomerNumber:", String.valueOf(customerNumber));
                         System.out.println("enter the items you need");
                         choice1 = obj.nextInt();
                         switch (choice1) {
@@ -178,8 +183,6 @@ public class Hotel {
                                 // System.out.println("item purchased" + buyed);
                                 // System.out.println("item total price" + pro);
                                 break;
-                            case 5:
-                                System.exit(0);
                         }
                         break;
 

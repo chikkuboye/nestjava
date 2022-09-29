@@ -124,15 +124,16 @@ public class Bill {
                                 }
                                 else {
 
-                                    for (int i=0 ; i<pro.size() ; i++)
+                                    for (int i=0 ; i < pro.size() ; i++)
                                     {
                                         num = num + pro.get(i);
                                     }
                                     map.put("Total: ",String.valueOf(num) );
                                     transaction.add(String.valueOf(map));
+                                    pro.clear();
                                     System.out.println(num);
                                 }
-                                pro.clear();
+                                // pro.clear();
                                 continue outer;
                                 // System.exit(0);
                             default:
@@ -158,8 +159,8 @@ public class Bill {
                                 // total = total + p;
                                 pro.add(p);
                                 // buyed.add("tea");
-                                map.put("Total:", String.valueOf(p));
-                                transaction.add(String.valueOf(map));
+                                //map.put("Total:", String.valueOf(p));
+                                //transaction.add(String.valueOf(map));
                                 //System.out.println("item purchased" + buyed);
                                 // System.out.println("item total price" + pro);
                                 break;
@@ -171,8 +172,8 @@ public class Bill {
                                 // total = total + p;
                                 pro.add(p);
                                 // buyed.add("coffee");
-                                map.put("Total:", String.valueOf(p));
-                                transaction.add(String.valueOf(map));
+                                //map.put("Total:", String.valueOf(p));
+                                //transaction.add(String.valueOf(map));
                                 // System.out.println("item purchased" + buyed);
                                 // System.out.println("item total price" + pro);
                                 break;
@@ -184,8 +185,8 @@ public class Bill {
                                 // total = total + p;
                                 pro.add(p);
                                 // buyed.add("dosa");
-                                map.put("Total:", String.valueOf(p));
-                                transaction.add(String.valueOf(map));
+                                //map.put("Total:", String.valueOf(p));
+                                //transaction.add(String.valueOf(map));
                                 // System.out.println("item purchased" + buyed);
                                 // System.out.println("item total price" + pro);
                                 break;
@@ -197,8 +198,8 @@ public class Bill {
                                 // total = total + p;
                                 pro.add(p);
                                 // buyed.add("idle");
-                                map.put("Total:", String.valueOf(p));
-                                transaction.add(String.valueOf(map));
+                                //map.put("Total:", String.valueOf(p));
+                                //transaction.add(String.valueOf(map));
                                 // System.out.println("item purchased" + buyed);
                                 // System.out.println("item total price" + pro);
                             case 5:
@@ -216,15 +217,16 @@ public class Bill {
                                 }
                                 else {
 
-                                    for (int i=0 ; i<pro.size() ; i++)
+                                    for (int i=0 ; i < pro.size() ; i++)
                                     {
                                         num = num + pro.get(i);
                                     }
-                                    map.put("Total: ",String.valueOf(pro.get(0)));
+                                    map.put("Total: ",String.valueOf(num));
                                     transaction.add(String.valueOf(map));
+                                    pro.clear();
                                     System.out.println(num);
                                 }
-                                pro.clear();
+                                // pro.clear();
                                 continue outer;
                             default:
                                 System.out.println("Invalid Choice");
